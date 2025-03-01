@@ -1,5 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&family=Tajawal:wght@200;300;400;500;700;800;900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
 * {
-  font-family: "Heebo", sans-serif;
+  font-family: "Work Sans", sans-serif;
   margin: 0;
   padding: 0;
 }
@@ -21,26 +22,56 @@
   box-shadow: 0px 10px 10px 5px rgba(0, 0, 0, 0.034);
   border-radius: 10px;
   width: 500px;
-  height: 500px;
-  margin-bottom: 50ch;
+  height: 400px;
+  margin-bottom: 35ch;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-.faqs-container {
-  height: 100%;
-}
-.faq {
+.container {
   display: flex;
-  justify-content: space-between;
-  padding: 2ch;
-  font-size: 13px;
-  font-weight: bold;
+  flex-direction: column;
+  scrollbar-width: none;
+  overflow: scroll;
 }
 
-.faq button {
+.expandable {
+  height: 100%;
+  margin-top: 10px;
+}
+
+.expandable-opened .expandable-content-wrapper {
+  grid-template-rows: 1fr;
+}
+.expandable-titlebar {
+  display: flex;
+  justify-content: space-between;
+  padding: 1.5ch;
+  margin: 9px;
+}
+
+.expandable-title {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.expandable-content-wrapper {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: 0.2s ease-out;
+}
+.expandable-content {
+  font-weight: 400;
+  width: 95%;
+  margin-left: 20px;
+  font-size: 14px;
+  color: grey;
+  overflow: hidden;
+}
+
+.expandable-titlebar button {
   margin-left: 30px;
   padding: 5px;
   width: 20px;
@@ -49,14 +80,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #9928d3;
-  color: white;
   border: none;
-  transition: 0.2s ease;
-}
-
-.faq button:hover {
-  background-color: #781ea5;
   transition: 0.2s ease;
 }
 
@@ -68,8 +92,15 @@
   margin-top: 20px;
 }
 .header p {
-  font-weight: bolder;
+  font-weight: 700;
   color: #301534;
   font-size: 40px;
   margin-left: 20px;
+}
+hr {
+  border: none;
+  height: 1px;
+  background-color: #0000000e;
+  width: 90%;
+  margin: auto;
 }

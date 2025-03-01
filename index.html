@@ -4,12 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-
+    <link rel="icon" href="assets/images/favicon-32x32.png" />
     <title>FAQ accordion</title>
   </head>
 
   <body>
-    <img class="TopSide" src="assets/images/background-pattern-desktop.svg"></img>
+    <img
+      class="TopSide"
+      src="assets/images/background-pattern-desktop.svg"
+      alt="Top Image"
+    />
 
     <div class="DownSide">
       <div class="card">
@@ -17,25 +21,81 @@
           <img src="assets/images/icon-star.svg" alt="star" />
           <p>FAQs</p>
         </div>
-        <div class="faqs-container">
-          <div class="faq">
-            <p>What is Frontend Mentor, and how will it help me?</p>
-            <button>+</button>
+        <div class="container">
+          <div class="expandable">
+            <div class="expandable-titlebar">
+              <div class="expandable-title">
+                What is Frontend Mentor, and how will it help me?
+              </div>
+              <button class="ExpandButton">
+                <img src="assets/images/icon-plus.svg" alt="Button Image" />
+              </button>
+            </div>
+            <div class="expandable-content-wrapper">
+              <div class="expandable-content">
+                Frontend Mentor offers realistic coding challenges to help
+                developers improve their frontend coding skills with projects in
+                HTML, CSS, and JavaScript. It's suitable for all levels and
+                ideal for portfolio building.
+              </div>
+            </div>
+            <hr />
           </div>
-          <div class="faq">
-            <p>Is Frontend mentor free?</p>
-            <button>+</button>
+          <div class="expandable">
+            <div class="expandable-titlebar">
+              <div class="expandable-title">Is Frontend Mentor free?</div>
+              <button class="ExpandButton">
+                <img src="assets/images/icon-plus.svg" alt="Button Image" />
+              </button>
+            </div>
+            <div class="expandable-content-wrapper">
+              <div class="expandable-content">
+                Yes, Frontend Mentor offers both free and premium plans. The
+                free plan includes a selection of projects, while the premium
+                plan provides access to more advanced challenges and additional
+                resources.
+              </div>
+            </div>
+            <hr />
           </div>
-          <div class="faq">
-            <p>Can I use Frontend mentor projects in my portfolio?</p>
-            <button>+</button>
+          <div class="expandable">
+            <div class="expandable-titlebar">
+              <div class="expandable-title">
+                Can I use Frontend Mentor projects in my portfolio?
+              </div>
+              <button class="ExpandButton">
+                <img src="assets/images/icon-plus.svg" alt="Button Image" />
+              </button>
+            </div>
+            <div class="expandable-content-wrapper">
+              <div class="expandable-content">
+                Yes! You can showcase the projects you build on Frontend Mentor
+                in your portfolio. It’s a great way to demonstrate your frontend
+                development skills to potential employers.
+              </div>
+            </div>
+            <hr />
           </div>
-          <div class="faq">
-            <p>What is Frontend Mentor, and how will it help me?</p>
-            <button>+</button>
+          <div class="expandable">
+            <div class="expandable-titlebar">
+              <div class="expandable-title">
+                How can I get help if I'm stuck on a challenge?
+              </div>
+              <button class="ExpandButton">
+                <img src="assets/images/icon-plus.svg" alt="Button Image" />
+              </button>
+            </div>
+            <div class="expandable-content-wrapper">
+              <div class="expandable-content">
+                You can seek help from the Frontend Mentor community by joining
+                their Discord server, posting in the discussion forums, or
+                reviewing solutions from other developers for inspiration.
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
+    <script src="script.js"></script>
   </body>
 </html>
