@@ -112,7 +112,7 @@ hr {
   margin: auto;
 }
 
-@media screen and (max-width: 560px) {
+@media screen and (max-width: 768px) {
   .TopSide {
     content: url("assets/images/background-pattern-mobile.svg");
   }
