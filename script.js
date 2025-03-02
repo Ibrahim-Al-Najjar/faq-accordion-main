@@ -1,19 +1,16 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const expandButtons = document.querySelectorAll(".ExpandButton");
+  const expandables = document.querySelectorAll(".expandable");
 
-  expandButtons.forEach((button) => {
-    button.addEventListener("click", function () {
-      const expandable = this.closest(".expandable");
-      const buttonImage = this.querySelector("img");
+  expandables.forEach((expandable) => {
+    expandable.addEventListener("click", function (event) {
+      const buttonImage = this.querySelector(".ExpandButton img");
 
-      if (expandable) {
-        expandable.classList.toggle("expandable-opened");
+      this.classList.toggle("expandable-opened");
 
-        if (expandable.classList.contains("expandable-opened")) {
-          buttonImage.src = "assets/images/icon-minus.svg";
-        } else {
-          buttonImage.src = "assets/images/icon-plus.svg";
-        }
+      if (this.classList.contains("expandable-opened")) {
+        buttonImage.src = "assets/images/icon-minus.svg";
+      } else {
+        buttonImage.src = "assets/images/icon-plus.svg";
       }
     });
   });
