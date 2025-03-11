@@ -4,9 +4,13 @@
   margin: 0;
   padding: 0;
 }
+html,
+body {
+  height: 100vh;
+  width: 100vw;
+}
 
 .TopSide {
-  height: 100%;
   width: 100%;
   content: url("assets/images/background-pattern-desktop.svg");
 }
@@ -29,14 +33,14 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
 }
 
 .header {
   display: flex;
   align-items: center;
-  width: 100%;
-  margin-left: 60px;
+  align-self: flex-start;
+  margin-left: 20px;
+  margin-top: 20px;
 }
 .header p {
   font-weight: 700;
@@ -47,18 +51,16 @@
 
 .container {
   display: flex;
+  margin-top: 50px;
   flex-direction: column;
   scrollbar-width: none;
+  justify-content: center;
   overflow: scroll;
-}
-
-.expandable {
-  height: 100%;
-  margin-top: 10px;
 }
 
 .expandable-opened .expandable-content-wrapper {
   grid-template-rows: 1fr;
+  padding-bottom: 20px;
 }
 .expandable-titlebar {
   display: flex;
@@ -84,8 +86,7 @@
 }
 .expandable-content {
   font-weight: 400;
-  width: 95%;
-  margin-left: 20px;
+  margin-inline: 20px;
   font-size: 14px;
   color: grey;
   overflow: hidden;
@@ -108,8 +109,7 @@ hr {
   border: none;
   height: 1px;
   background-color: #0000000e;
-  width: 90%;
-  margin: auto;
+  margin-inline: 20px;
 }
 
 @media screen and (max-width: 768px) {
@@ -124,14 +124,8 @@ hr {
     margin: auto;
   }
   .card {
-    width: 300px;
-  }
-  .header p {
-    font-size: 30px;
-  }
-  .header img {
-    width: 25px;
-    height: 25 px;
+    flex: 1;
+    margin-inline: 20px;
   }
 
   .expandable-title {
