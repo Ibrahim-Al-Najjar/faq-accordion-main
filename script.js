@@ -5,7 +5,6 @@ document.addEventListener("DOMContentLoaded", function () {
     expandable.addEventListener("click", function (event) {
       const buttonImage = this.querySelector(".ExpandButton img");
 
-      // Collapse other expandables
       expandables.forEach((otherExpandable) => {
         if (otherExpandable !== this) {
           otherExpandable.classList.remove("expandable-opened");
